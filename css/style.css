@@ -54,9 +54,6 @@ body {
     background: #fff;
     text-align: center;
     overflow-y: hidden;
+    background-color: black;
 }
 
-header{
-    height: 20px;
-
-}

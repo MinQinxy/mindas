@@ -27,7 +27,8 @@
                <textarea style="display:none;" name="test-editormd-markdown-doc">###Hello world!</textarea>               
             </div>
             <div id="test-editormd-view2">
-                <textarea id="append-test" style="display:none;">
+                <textarea 
+                 style="display:none;">
 
 ###科学公式 TeX(KaTeX)
                     
@@ -101,10 +102,8 @@ alert("script");
             $(function() {
                 var testEditormdView, testEditormdView2;
                 
-                $.get("test.md", function(markdown) {
-                    
-				    testEditormdView = editormd.markdownToHTML("test-editormd-view", {
-                        markdown        : markdown ,//+ "\r\n" + $("#append-test").text(),
+                   testEditormdView = editormd.markdownToHTML("test-editormd-view", {
+                        markdown        : "#title" ,//+ "\r\n" + $("#append-test").text(),
                         //htmlDecode      : true,       // 开启 HTML 标签解析，为了安全性，默认不开启
                         htmlDecode      : "style,script,iframe",  // you can filter tags decode
                         //toc             : false,
@@ -126,7 +125,6 @@ alert("script");
                     //console.log(testEditormdView.getMarkdown());
                     
                     //alert(testEditormdView.getMarkdown());
-                });
                     
                 testEditormdView2 = editormd.markdownToHTML("test-editormd-view2", {
                     htmlDecode      : "style,script,iframe",  // you can filter tags decode
